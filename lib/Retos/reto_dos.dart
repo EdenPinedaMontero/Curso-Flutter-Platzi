@@ -14,6 +14,7 @@ class RetoDos extends StatelessWidget {
         ),
       ),
     */
+      // ===== Se agrega una imagen que estará de fondo, y se utiliza un stack que sirve para poner widgets encima de otros =====//
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -23,6 +24,7 @@ class RetoDos extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+          // ===== Se crea un contenedor donde tendra un color transparente y que este centrado incluyendo el texto =====//
           Center(
             child: Container(
               color: const Color.fromRGBO(0, 0, 0, 0.5),
