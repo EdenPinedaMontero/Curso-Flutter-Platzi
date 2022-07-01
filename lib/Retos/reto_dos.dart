@@ -6,13 +6,14 @@ class RetoDos extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /* appBar: AppBar(
         title: const Text(
           'Reto numero 2',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 20),
         ),
       ),
+    */
       body: Stack(
         fit: StackFit.expand,
         children: [
