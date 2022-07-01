@@ -3,18 +3,48 @@
 import 'package:flutter/material.dart';
 
 class DescriptionPlace extends StatelessWidget {
-  const DescriptionPlace({Key? key}) : super(key: key);
+  String namePlace;
+  int stars;
+  String descriptionPlace;
+
+// ==== Crear un constructor donde reciba los datos declarados arriba ====/
+  DescriptionPlace(this.namePlace, this.stars, this.descriptionPlace,
+      {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    //==== agregar una variable de star que muestre el estado diferente 1======//
+    final star_half = Container(
+      margin: const EdgeInsets.only(
+        top: 323,
+        right: 3,
+      ),
+      //======== asignación del icono star a la mitad y con color exadecimal ==========//
+      child: const Icon(
+        Icons.star_half,
+        color: Color(0xFFf2C611),
+      ),
+    );
+    //==== agregar una variable de star que muestre el estado diferente 2======//
+    final star_border = Container(
+      margin: const EdgeInsets.only(
+        top: 323,
+        right: 3,
+      ),
+      //======== asignación del icono star sin rrellenar color==========//
+      child: const Icon(
+        Icons.star_border,
+        color: Color(0xFFf2C611),
+      ),
+    );
     //===== Declarando variable star para las estrellas con un container ========//
-
     final star = Container(
       margin: const EdgeInsets.only(
         top: 323,
         right: 3,
       ),
-      //======== asignación del icono star y con color exadecimal ==========//
+      //======== asignación del icono star completo y con color exadecimal ==========//
       child: const Icon(
         Icons.star,
         color: Color(0xFFf2C611),
@@ -34,9 +64,11 @@ class DescriptionPlace extends StatelessWidget {
           ),
           child:
               //===== Creando el texto y dar formato ========//
-              const Text(
-            'Duwili Ella',
-            style: TextStyle(
+              Text(
+            // 'Duwili Ella',
+            namePlace,
+            style: const TextStyle(
+              fontFamily: "Lato",
               fontSize: 30,
               fontWeight: FontWeight.w900,
             ),
@@ -50,7 +82,7 @@ class DescriptionPlace extends StatelessWidget {
             star,
             star,
             star,
-            star,
+            star_half,
           ],
         ),
       ],
@@ -59,17 +91,18 @@ class DescriptionPlace extends StatelessWidget {
     final description = Container(
       //=== agregar el tamaño de los márgenes ===//
       margin: const EdgeInsets.only(
-        top: 22,
-        right: 22,
-        left: 22,
+        top: 20,
+        right: 20,
+        left: 20,
       ),
       //=== agregando el párrafo y color ===//
-      child: const Text(
-        'Incididunt non labore ad excepteur ad elit adipisicing ullamco velit reprehenderit duis pariatur. Eiusmod veniam consectetur laborum dolore in. Proident consectetur id mollit laborum aliqua non anim. Excepteur amet proident laborum deserunt non eiusmod officia culpa amet dolore labore. In incididunt pariatur nisi id ut id. Ut sit do ullamco qui proident nisi minim officia.',
-        style: TextStyle(
-          fontSize: 15,
-          fontWeight: FontWeight.w400,
-          color: Color.fromARGB(255, 146, 145, 124),
+      child: Text(
+        descriptionPlace,
+        style: const TextStyle(
+          fontFamily: "Lato",
+          fontSize: 16,
+          fontWeight: FontWeight.bold,
+          color: Color.fromARGB(255, 110, 110, 94),
         ),
       ),
     );
@@ -78,7 +111,7 @@ class DescriptionPlace extends StatelessWidget {
     // ignore: avoid_unnecessary_containers
     final contenido = Container(
       child: Column(
-        children: [title_stars, description],
+        children: [title_stars, description, description],
       ),
     );
 //=== retornación de la variable contenido ===//
