@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:platzi_trips_app/Practicas/header_appbar.dart';
 import 'package:platzi_trips_app/Practicas/hola_mundo.dart';
+import 'package:platzi_trips_app/Practicas/review_list.dart';
 import 'package:platzi_trips_app/Retos/reto_dos.dart';
 
 import 'Practicas/description_place.dart';
 
-/*void main() {
+void main() {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarBrightness: Brightness.light));
   runApp(MyApp());
-}*/
+}
 
-void main() => runApp(MyApp());
+//void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // const MyApp({Key? key}) : super(key: key);
   MyApp({Key? key}) : super(key: key);
 
   String descriptionDummy =
-      "Id ex ad Lorem in quis minim. Proident proident veniam elit consectetur. Labore amet mollit voluptate non irure culpa. Exercitation minim consectetur ex ex fugiat.";
+      "La Ciudad de México es la capital del país, de carácter vibrante, multifacético y siempre en movimiento, es el núcleo, político, económico y cultural de la República Mexicana. La CDMX guarda entre sus calles y largas avenidas los secretos y acontecimientos que han dado forma a la nación.";
+  String descriptionDummy2 =
+      "En el Paseo de la Reforma podrás admirar el Ángel de la Independencia y recargar energías en alguno de los muchos restaurantes que encontrarás en la Zona Rosa.";
 
   // This widget is the root of your application.
   @override
@@ -26,15 +34,30 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        appBar: AppBar(
+        /*   appBar: AppBar(
           title: const Text(
             ' Practica',
           ),
           centerTitle: true,
-        ),
-        body: // const RetoDos(),
+        ),*/
+        body:
+            // const RetoDos(),
             // const DescriptionPlace(),
-            new DescriptionPlace("México", 4, descriptionDummy),
+            //new DescriptionPlace("México", 4, descriptionDummy),
+            //const ReviewList(),
+            //===Stack hace que ponga un elemento en cima de otro===//
+            Stack(
+          children: [
+            ListView(
+              children: [
+                DescriptionPlace(
+                    "México", 4, descriptionDummy, descriptionDummy2),
+                const ReviewList(),
+              ],
+            ),
+            const HeaderAppBar(),
+          ],
+        ),
       ),
       //
     );
