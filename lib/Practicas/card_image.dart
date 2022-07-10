@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:platzi_trips_app/Practicas/floating_action_button_green.dart';
 
 // ignore: must_be_immutable
 class CardImage extends StatelessWidget {
@@ -34,6 +35,9 @@ class CardImage extends StatelessWidget {
             )
           ]),
     );
-    return card;
+    return Stack(
+      alignment: const Alignment(0.77, 1.2), //Alineando la posición del boton
+      children: [card, const FloatingActionButtonGreen()],
+    );
   }
 }
