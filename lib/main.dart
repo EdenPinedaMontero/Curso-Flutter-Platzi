@@ -4,6 +4,7 @@ import 'package:platzi_trips_app/Practicas/header_appbar.dart';
 import 'package:platzi_trips_app/Practicas/hola_mundo.dart';
 import 'package:platzi_trips_app/Practicas/review_list.dart';
 import 'package:platzi_trips_app/Retos/reto_dos.dart';
+import 'package:platzi_trips_app/Retos/reto_tres_list_final.dart';
 
 import 'Practicas/description_place.dart';
 
@@ -29,18 +30,30 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
-        /*   appBar: AppBar(
-          title: const Text(
-            ' Practica',
+        /*
+      //=== App Bar del reto 3 ===//
+          appBar: AppBar(
+            title: const Text(
+              ' Reto Tres',
+            ),
+            centerTitle: true,
           ),
-          centerTitle: true,
-        ),*/
+          */
+
         body:
+            //List View del reto 3//
+            /*
+           ListView(
+            children: const [RetoTresListFinal()],
+          )
+          */
+
             // const RetoDos(),
             // const DescriptionPlace(),
             //new DescriptionPlace("México", 4, descriptionDummy),
