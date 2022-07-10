@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:platzi_trips_app/Practicas/button_purple.dart';
 
+// ignore: must_be_immutable
 class DescriptionPlace extends StatelessWidget {
   String namePlace;
   int stars;
@@ -18,6 +19,7 @@ class DescriptionPlace extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //==== agregar una variable de star que muestre el estado diferente 1======//
+    // ignore: non_constant_identifier_names
     final star_half = Container(
       margin: const EdgeInsets.only(
         top: 323,

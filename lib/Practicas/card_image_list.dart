@@ -6,6 +6,7 @@ class CardImageList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: sized_box_for_whitespace
     return Container(
       height: 350,
       child: ListView(
