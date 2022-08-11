@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 //import 'package:platzi_trips_app/Practicas/header_appbar.dart';
 //import 'package:platzi_trips_app/Practicas/hola_mundo.dart';
 import 'package:platzi_trips_app/Practicas/platzi_trips.dart';
+import 'package:platzi_trips_app/Practicas/platzi_trips_cupertino.dart';
 //import 'package:platzi_trips_app/Practicas/review_list.dart';
 //import 'package:platzi_trips_app/Retos/reto_dos.dart';
 //import 'package:platzi_trips_app/Retos/reto_tres_list_final.dart';
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PlatziTrips(), //Sera el punto central de la aplicación
+      home:
+          const PlatziTripsCupertino(), //Sera el punto central de la aplicación
       //Scaffold(
       /*
       //=== App Bar del reto 3 ===//
